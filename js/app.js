@@ -1,6 +1,31 @@
+/// ********************* P5 ****************///
+
+
+let header = document.getElementById("header");
+
+function setup() {
+  
+  let canvas = createCanvas(windowWidth, windowHeight - header.clientHeight)
+  canvas.parent('sketch');
+
+  // put setup code here
+}
+
+function draw() {
+  ellipse(mouseX, mouseY, mouseX, mouseY);
+  // put drawing code here
+}
+
+
+
+
+
+
+
+
+/// ********************* TIMETABLE ****************///
 const filters = document.getElementsByClassName("filter");
 let current = document.getElementsByClassName("active");
-
 drawTimetable(current[0].classList[1]);
 
 for (let e of filters) {
@@ -54,8 +79,17 @@ function drawTimetable(day) {
       { url: "../artiste.html" }
     );
 
-    let renderer = new Timetable.Renderer(timetable);
-    renderer.draw(".timetable");
+        // Troisième événement
+        timetable.addEvent(
+          "Sixtynine",
+          "Le Romandie",
+          new Date(2020, 10, 17, 15, 00),
+          new Date(2020, 10, 17, 17, 45),
+          { url: "../artiste.html" }
+        );
+    
+        let renderer = new Timetable.Renderer(timetable);
+        renderer.draw(".timetable");
   }
   // Deuxième jour
   else if (day == "samedi") {
@@ -75,6 +109,14 @@ function drawTimetable(day) {
       "PTR",
       new Date(2020, 10, 17, 18, 30),
       new Date(2020, 10, 17, 19, 45),
+      { url: "../artiste.html" }
+    );
+
+    timetable.addEvent(
+      "Boards of canada",
+      "Fri-Son",
+      new Date(2020, 10, 17, 20, 30),
+      new Date(2020, 10, 17, 22, 45),
       { url: "../artiste.html" }
     );
     let renderer = new Timetable.Renderer(timetable);
@@ -98,7 +140,16 @@ function drawTimetable(day) {
       new Date(2020, 10, 17, 15, 00),
       { url: "../artiste.html" }
     );
+    timetable.addEvent(
+      "Alpha-one",
+      "Les Docks",
+      new Date(2020, 10, 17, 16, 00),
+      new Date(2020, 10, 17, 17, 00),
+      { url: "../artiste.html" }
+    );
     let renderer = new Timetable.Renderer(timetable);
     renderer.draw(".timetable");
   }
 }
+
+
