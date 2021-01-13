@@ -24,10 +24,10 @@ header nav a {
 }
 
 #jours ul li.active,
-#jours ul li:hover {
+#jours ul li {
   cursor: pointer;
   text-decoration: underline;
-  color: white;
+  color: black;
 }
 
 #jours ul {
@@ -37,4 +37,39 @@ header nav a {
 
 .filter {
   color: white;
+}
+
+table#prog {
+  color: white;
+}
+
+table#prog td,
+table#prog th {
+  padding: 1em;
+  text-align: left;
+}
+
+table#prog td {
+  border-top: 1px solid #f0f;
+
+  border-bottom: 1px solid #f0f;
+}
+
+/* Restyle timetable.js */
+.timetable > aside::before {
+  background-color: black;
+  height: 110px;
+}
+
+.timetable > section > header {
+  background-color: black;
+  color: white;
+}
+
+.timetable > aside li {
+  background-color: black;
+}
+
+.timetable ul.room-timeline li {
+  background-color: black;
 }
