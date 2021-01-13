@@ -26,7 +26,6 @@ header nav a {
 #jours ul li.active,
 #jours ul li {
   cursor: pointer;
-  text-decoration: underline;
   color: black;
 }
 

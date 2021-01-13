@@ -3,22 +3,42 @@
 
 let header = document.getElementById("header");
 let video;
+let chair;
+let hand;
+function preload() {
+  // Load model with normalise parameter set to true
+  chair = loadModel('assets/chair.obj', true);
+  hand = loadModel('assets/hand.obj', true);
+}
 
 
 function setup() {
   
-  let canvas = createCanvas(windowWidth, windowHeight - header.clientHeight)
+  let canvas = createCanvas(windowWidth, windowHeight - header.clientHeight,WEBGL)
   canvas.parent('sketch');
  // video = createVideo('../assets/luff_affche.mp4');
   // video.hide();
   // video.loop();
-  
+  detailX = createSlider(3, 24, 3);
+  detailX.position(10, height + 5);
+  detailX.style('width', '80px');
 
   // put setup code here
 }
 
 function draw() {
-  ellipse(mouseX, mouseY, mouseX, mouseY);
+
+
+ background(255, 255, 255);
+ scale(2.5); // Scaled to make model fit into canvas
+ rotateX(frameCount * 0.02);
+ rotateY(frameCount * 0.02);
+  ambientLight(0);
+  emissiveMaterial(3, 252, 152);
+ model(chair);
+ model(hand);
+
+
 
   //fill('#ED225D');
   //textFont(myFont,mouseX, mouseY, mouseX, mouseY);

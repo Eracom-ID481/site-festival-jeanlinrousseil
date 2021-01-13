@@ -38,6 +38,7 @@ h5 {
   color: black;
   font-size: 1.25rem;
   font-family: "Orbitron", sans-serif;
+  text-decoration-style: solid;
 }
 
 h6 {
