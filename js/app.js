@@ -5,10 +5,12 @@ let header = document.getElementById("header");
 let video;
 let chair;
 let hand;
+let luff;
 function preload() {
   // Load model with normalise parameter set to true
-  chair = loadModel('assets/chair.obj', true);
-  hand = loadModel('assets/hand.obj', true);
+  //chair = loadModel('assets/chair.obj', true);
+  //hand = loadModel('assets/hand.obj', true);
+  luff = loadModel('assets/luff.obj', true);
 }
 
 
@@ -27,16 +29,31 @@ function setup() {
 }
 
 function draw() {
+let locX = mouseX - height / 2;
+let locY = mouseY - width / 2;
+
+ambientLight(60, 60, 60);
+pointLight(mouseY, mouseY, mouseY, locX, locY, mouseX);
+noStroke();
+
+background(255, 255, 255);
+scale(2.5); // Scaled to make model fit into canvas
+rotateX(frameCount * 0.02);
+rotateY(frameCount * 0.02);
+specularMaterial(mouseX,mouseY);
+model(luff);
 
 
- background(255, 255, 255);
- scale(2.5); // Scaled to make model fit into canvas
- rotateX(frameCount * 0.02);
- rotateY(frameCount * 0.02);
-  ambientLight(0);
-  emissiveMaterial(3, 252, 152);
- model(chair);
- model(hand);
+
+
+
+
+  //ambientLight(0);
+  //emissiveMaterial(3, 252, 152);
+  //normalMaterial(mouseX,mouseY);
+ //model(chair);
+// model(hand);
+
 
 
 

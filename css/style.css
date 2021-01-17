@@ -72,3 +72,12 @@ table#prog td {
 .timetable ul.room-timeline li {
   background-color: black;
 }
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.img {
+  padding: 2rem;
+}
