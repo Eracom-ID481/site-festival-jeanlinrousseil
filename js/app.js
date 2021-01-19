@@ -10,7 +10,7 @@ function preload() {
   // Load model with normalise parameter set to true
   //chair = loadModel('assets/chair.obj', true);
   //hand = loadModel('assets/hand.obj', true);
-  luff = loadModel('assets/luff.obj', true);
+  luff = loadModel('assets/luff3.obj', true);
 }
 
 
@@ -162,13 +162,6 @@ function drawTimetable(day) {
     );
 
     // Deuxième événement
-    timetable.addEvent(
-      "Torriko",
-      "Collège du Belvédère",
-      new Date(2020, 10, 17, 13, 00),
-      new Date(2020, 10, 17, 15, 45),
-      { url: "../artiste.html" }
-    );
 
     timetable.addEvent(
       "Gesmcom",
