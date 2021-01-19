@@ -67,4 +67,18 @@ a{
 
 
 
-/*Background animation*/
+/*grille*/
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 20px;
+  background-color: #ffffff;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: white);
+  border: none;
+  text-align: center;
+  font-size: 30px;
+}
