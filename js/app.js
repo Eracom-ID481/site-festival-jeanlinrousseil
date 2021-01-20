@@ -21,9 +21,7 @@ function setup() {
  // video = createVideo('../assets/luff_affche.mp4');
   // video.hide();
   // video.loop();
-  detailX = createSlider(3, 24, 3);
-  detailX.position(10, height + 5);
-  detailX.style('width', '80px');
+
 
   // put setup code here
 }
