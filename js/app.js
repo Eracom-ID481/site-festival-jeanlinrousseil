@@ -10,7 +10,7 @@ function preload() {
   // Load model with normalise parameter set to true
   //chair = loadModel('assets/chair.obj', true);
   //hand = loadModel('assets/hand.obj', true);
-  luff = loadModel('assets/luff3.obj', true);
+  luff = loadModel('assets/doggy.obj', true);
 }
 
 
